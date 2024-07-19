@@ -1,6 +1,6 @@
-## What is FirebaseCoreSDK
+## What is Firebase.Core.SDK
 
-FirebaseCoreSDK is .net core library for interacting with firebase database, Cloud Messaging and storage. Library is supposed to be used in server side apps. This code is based on https://github.com/shoaibshakeel381/FirebaseCoreAdmin 
+Firebase.Core.SDK is .net core library for interacting with firebase database, Cloud Messaging and storage. Library is supposed to be used in server side apps. This code is based on https://github.com/shoaibshakeel381/FirebaseCoreSDK 
 But it has improved code organization with additional fixes and enhancements. It supports
 - Firebase Cloud Messaging (Tested Basic, Android and APNs Messaging modes, WebPush should work, but is untested)
 - Firebase Realtime Database (Basic Crud, no Offline or Streaming support)
@@ -12,7 +12,7 @@ But it has improved code organization with additional fixes and enhancements. It
 ## Initialization
 
 Supports both json and p12 config files.
-In order to give permissions to FirebaseCoreSdk to use your firebase project you need to first create private key in [service account] tab on (https://console.cloud.google.com/iam-admin/serviceaccounts). After creating service account you will be propmted to download either json file or p12 file, recommended is json file. Download that file and attach to your project.
+In order to give permissions to Firebase.Core.SDK to use your firebase project you need to first create private key in [service account] tab on (https://console.cloud.google.com/iam-admin/serviceaccounts). After creating service account you will be propmted to download either json file or p12 file, recommended is json file. Download that file and attach to your project.
 
 * Json file
 ``` C#
