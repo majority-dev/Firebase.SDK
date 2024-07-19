@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Package information -->
+        <id>Firebase.SDK</id>
+        <version>1.0.0</version>
+        <authors>MAJORITY</authors>
+        <owners>MAJORITY</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Firebase SDK for .NET Core server side apps</description>
+        <releaseNotes>
+        - Firebase Cloud Messaging
+        - Firebase Realtime Database (Basic Crud, no Offline or Streaming support)
+        - Firebase Storage
+        - Authentication (Generate Custom Token for users, no user management)
+        - Logging (You can provide logger in FirebaseSDKConfiguration)
+        - Support for plugging custom HttpClient for supprting mocks, IHttpClientFactory, Polly etc, see github repo.
+        </releaseNotes>
+        <license type="file">LICENSE.txt</license>
+        <repository type="git" url="https://github.com/majority-dev/Firebase.SDK" />
+        <readme>README.md</readme>
+        <tags>Firebase</tags>
+    </metadata>
+    <files>
+        <file src="LICENSE.txt" target="" />
+        <file src="README.md" target="" />
+        <!-- Include other files as needed -->
+    </files>
+</package>
