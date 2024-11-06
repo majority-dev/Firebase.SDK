@@ -53,7 +53,7 @@
                 return uri;
             }
 
-            return Authority == null ? uri : new Uri(Authority, uri);
+            return Authority == null ? uri : Authority.Append(uri.ToString());
         }
 
         protected Task<string> SendAsync(Func<HttpRequestMessage> requestMessage) => Client.SendAsync(requestMessage);

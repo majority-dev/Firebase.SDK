@@ -17,6 +17,8 @@
     using Firebase.Auth.ServiceAccounts;
     using Firebase.Storage.Models;
     using HttpClients.Storage;
+    using System.Linq;
+    using Jose;
 
     #endregion
 
@@ -40,7 +42,7 @@
             var metaUri = new Uri($"{_configuration.StorageBaseAuthority2}/v1/b/{_credentials.GetDefaultBucket()}/o/{urlEncodedPath}", UriKind.Absolute);
             return _httpClient.SendStorageRequestAsync<ObjectMetadata>(metaUri, HttpMethod.Get);
         }
-
+       
         public string GetPublicUrl(string path)
         {
             if (string.IsNullOrWhiteSpace(path))
@@ -51,7 +53,7 @@
             var normalizedPath = WebUtility.UrlEncode(path.TrimSlashes());
 
             var auth = _httpClient.GetAuthority();
-            var fullPath = new Uri(auth, $"/{_credentials.GetDefaultBucket()}/{normalizedPath}?alt=media");
+            var fullPath = auth.Append($"/{_credentials.GetDefaultBucket()}/{normalizedPath}?alt=media");
             return fullPath.AbsoluteUri;
         }
 
