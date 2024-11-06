@@ -22,7 +22,7 @@
     <RepositoryUrl>https://github.com/majority-dev/Firebase.SDK</RepositoryUrl>
     <IncludeSource>false</IncludeSource>
     <PackageTags>firebase .net core</PackageTags>
-    <Version>3.0.0</Version>
+    <Version>3.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
